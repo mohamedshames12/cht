@@ -1,0 +1,255 @@
+@import url();
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+::selection{
+    color: #fff;
+    background: #007bff;
+}
+::-webkit-scrollbar{
+    width: 3px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #3a6a79;
+}
+::-webkit-scrollbar-thumb{
+    background: #ddd;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #bb1f1f;
+}
+.wrapper{
+width: 370px;
+background: #3e4031;
+border-radius: 5px;
+border: 1px solid lightgrey;
+border-top: 0px;
+
+}
+.wrapper .title{
+background: #005c4d;
+color:#F8F8FF;
+font-size: 20px;
+font-weight: 500;
+line-height: 60px;
+text-align: center;
+border-bottom: 1px solid #db0f90;
+border-radius: 5px 5px 0 0;
+}
+.wrapper .form{
+    padding: 20px 15px;
+    min-height:400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.wrapper .form .inbox{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    margin: 1rem 0;
+}
+.wrapper .form .user-inbox{
+   justify-content: flex-end; 
+   margin: 13px 0;
+}
+.wrapper .form .inbox .icon{
+    height: 40px;
+    width: 40px;
+    color: #d11379;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    background: #1d1628;
+
+}
+.wrapper .form .inbox .msg-header{
+    max-width: 53%;
+   
+    margin-left:10px;
+
+}
+.form .inbox .msg-header p{
+    color: palevioletred;
+    background: yellowgreen;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size:14px ;
+    }
+.gee1-btn, .gee2-btn, .gee3-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .msg-header{
+    background: yellowgreen;
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin-top: 14px;
+    position: relative;
+  }
+  
+  
+  .gee1-btn:hover, .gee2-btn:hover, .gee3-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+
+ .form .user-inbox .msg-header p{
+color: darkgrey;
+background: #1d1d91;
+}
+.wrapper .typing-field{
+   display: flex;
+   height: 60px;
+   width: 100%;
+   align-items: center;
+   justify-content: space-evenly;
+background: red;
+border-top: 1px solid blue;
+border-radius: 0 0 5px 5px;
+
+}
+.wrapper .typing-field .input-data{
+    height: 40px;
+width: 335px;
+position: relative;
+}
+.wrapper .typing-field .input-data input{
+height: 100%;
+width: 100%;
+outline: none;
+border: 1px solid transparent;
+padding: 0 8px 0 15px;
+border-radius: 3px;
+font-size: 15px;
+background: rgb(165, 196, 238);
+transition: all 0.3s ease;
+}.wrapper .typing-field .input-data input:focus{
+    background: yellow;
+    text-align: right;
+
+}
+.input-data input::placeholder{
+    color: aqua;
+    transition: all 0.3s ease;
+    text-align: right;
+
+
+}
+.input-data input:focus::placeholder{
+    color: #d19090;
+    text-align: right;
+
+}
+.wrapper .typing-field .input-data button{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    height:30px;
+    width: 65px;
+    color: #d19090;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    background: #5c0000;
+    border: 1px solid violet;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+.wrapper .typing-field .input-data input:valid ~ button{
+    opacity: 1;
+    pointer-events: auto;  
+
+
+    
+}
+.wrapper .typing-field .input-data button:hover{
+background: lightblue;
+}
+.bot-inbox ol {   
+    list-style-type: none;  
+    padding: 10px;   
+    margin: 0;   
+    background-color: yellowgreen; 
+    border-radius: 10px; 
+  }  
+
+  .bot-inbox li {   
+    color: palevioletred;   
+    font-size: 14px;   
+    margin-bottom: 5px;  
+    counter-increment: item; 
+  }  
+  
+  .bot-inbox li:before {   
+    content: counter(item) ". ";   
+    color: #d11379;   
+    font-weight: bold;   
+    font-size: 18px;
+    margin-right: 10px; 
+  }  
+  
+  .msg-header ol {
+    margin-top: 5px; 
+  }  
+  
+  .msg-header ol li {  
+    font-size: 14px;   
+    padding: 8px 10px; 
+    margin-bottom: 5px; 
+  } 
+  
+  .msg-header ol li:last-child {   
+    margin-bottom: 0;}
+.wrapper, .form, .form .inbox, .typing-field,
+.input-data, .bot-inbox ol, .bot-inbox li, .msg-header ol, .msg-header ol li {
+text-align: center;
+} 
+bot-inbox ol {   list-style-type: decimal;
+margin: 0;   padding: 0; } 
+.bot-inbox li {   margin-bottom: 5px;
+padding-left: 20px;  
+text-align: left;  
+position: relative;  
+font-size: 14px;  } 
+.bot-inbox li::before { 
+position: absolute; 
+left: 0;   color: #d11379; 
+font-size: 12px;  }
+
+.id-topic{
+  width: 100%;
+  text-align: start;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0 1rem;
+  cursor: pointer;
+  margin: .2rem 0;
+}
+
+.body{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+}
